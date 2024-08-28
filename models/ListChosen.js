@@ -1,5 +1,4 @@
-import { ChoseItem } from "../models/ChoseItem.js";
-
+// models/ListChosen.js
 export class ListChosen {
   constructor() {
     this.items = [];
