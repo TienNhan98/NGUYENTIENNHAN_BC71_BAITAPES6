@@ -2,21 +2,17 @@
 <html lang="en">
   <head>
     <title>CyberLearn Dressing Room</title>
-    <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-
-    <!-- Bootstrap CSS -->
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-
     <link rel="stylesheet" href="./../assets/css/style.css" />
   </head>
   <body>
@@ -27,7 +23,6 @@
             <div class="text-center">
               <img src="./../assets/images/cybersoft.png" alt="Card image" />
             </div>
-
             <div class="card-body">
               <h4 class="card-title text-center">
                 CyberLearn - Học lập trình trực tuyến - Dự án thử đồ trực tuyến
@@ -40,11 +35,34 @@
       </div>
       <div class="row">
         <div class="col-md-8">
-          <ul class="nav nav-pills"></ul>
-
+          <ul class="nav nav-pills">
+            <li class="nav-item">
+              <a class="nav-link active" data-type="shirt">Áo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-type="pants">Quần</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-type="shoes">Giày Dép</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-type="handbags">Túi Xách</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-type="necklaces">Dây Chuyền</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-type="hairstyles">Kiểu Tóc</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-type="backgrounds">Nền</a>
+            </li>
+          </ul>
           <div class="well">
             <!-- Tab panes -->
-            <div class="tab-content"></div>
+            <div class="tab-content">
+              <div class="tab-pane active" id="item-container"></div>
+            </div>
           </div>
         </div>
         <div class="col-md-4">
@@ -62,8 +80,6 @@
         </div>
       </div>
     </div>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
@@ -75,10 +91,6 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
-
-    <script src="./../models/ListChosen.js"></script>
-    <script src="./../models/ChoseItem.js"></script>
-    <script src="./../utils/callData.js"></script>
-    <script src="./../controllers/main.js"></script>
+    <script type="module" src="../controllers/main.js"></script>
   </body>
 </html>
