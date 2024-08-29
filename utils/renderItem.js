@@ -1,4 +1,3 @@
-// utils/renderItems.js
 export const renderItems = (items, containerId) => {
   const container = document.getElementById(containerId);
   if (!container) {

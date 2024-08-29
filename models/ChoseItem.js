@@ -1,4 +1,3 @@
-// models/ChoseItem.js
 export class ChoseItem {
   constructor(id, type, name, image) {
     this.id = id;

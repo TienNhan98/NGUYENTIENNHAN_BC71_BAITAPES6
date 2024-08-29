@@ -1,4 +1,3 @@
-// models/ListChosen.js
 export class ListChosen {
   constructor() {
     this.items = [];
