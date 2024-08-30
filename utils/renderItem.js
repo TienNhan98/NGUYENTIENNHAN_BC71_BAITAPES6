@@ -1,24 +1,21 @@
-export const renderItems = (items, containerId) => {
-  const container = document.getElementById(containerId);
-  if (!container) {
-    console.error(`Container with id ${containerId} not found.`);
-    return;
-  }
+export function renderItems(type, items) {
+  const container = document.getElementById("tab-content-container");
+  container.innerHTML = "";
 
-  const itemsHtml = items
-    .map(
-      (item) => `
-        <div class="col-md-3 mb-4">
-          <div class="card">
-            <img src="${item.image}" alt="${item.name}" class="card-img-top" style="width: 100%; height: auto;" onclick="tryOn('${item.type}', '${item.image}')" />
-            <div class="card-body">
-              <h5 class="card-title">${item.name}</h5>
-            </div>
+  const filteredItems = items.filter((item) => item.type === type);
+
+  filteredItems.forEach((item) => {
+    const itemHtml = `
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="${item.imgSrc_jpg}" alt="${item.name}" class="card-img-top">
+          <div class="card-body text-center">
+            <h5 class="card-title">${item.name}</h5>
+            <button class="btn btn-primary try-btn" onclick="tryOnItem('${item.imgSrc_png}', '${item.type}')">Thử đồ</button>
           </div>
         </div>
-      `
-    )
-    .join("");
-
-  container.innerHTML = itemsHtml;
-};
+      </div>
+    `;
+    container.innerHTML += itemHtml;
+  });
+}

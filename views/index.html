@@ -35,51 +35,32 @@
       </div>
       <div class="row">
         <div class="col-md-8">
-          <ul class="nav nav-pills">
-            <li class="nav-item">
-              <a class="nav-link active" href="#" data-type="shirt">Áo</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#" data-type="pants">Quần</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#" data-type="shoes">Giày Dép</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#" data-type="handbags">Túi Xách</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#" data-type="necklaces">Dây Chuyền</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#" data-type="hairstyles">Kiểu Tóc</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#" data-type="backgrounds">Nền</a>
-            </li>
-          </ul>
+          <ul class="nav nav-pills" id="nav-pills-container"></ul>
 
           <div class="well">
             <div class="tab-content">
-              <div class="tab-pane active" id="item-container"></div>
+              <div class="tab-pane active" id="tab-content-container"></div>
             </div>
           </div>
         </div>
         <div class="col-md-4">
           <div class="contain">
             <div class="body"></div>
-            <div class="model"></div>
-            <div class="hairstyle"></div>
-            <div class="necklace"></div>
             <div class="bikinitop"></div>
+            <div class="topclothes"></div>
+            <div class="botclothes"></div>
             <div class="bikinibottom"></div>
-            <div class="handbag"></div>
-            <div class="feet"></div>
+            <div class="model"></div>
+            <div class="handbags"></div>
+            <div class="necklaces"></div>
+            <div class="hairstyle"></div>
+            <div class="shoes"></div>
             <div class="background"></div>
           </div>
         </div>
       </div>
     </div>
+
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
@@ -91,6 +72,9 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
-    <script type="module" src="../controllers/main.js"></script>
+    <script src="./../models/ListChosen.js" type="module"></script>
+    <script src="./../models/ChoseItem.js" type="module"></script>
+    <script src="./../utils/renderItem.js" type="module"></script>
+    <script src="./../controllers/main.js" type="module"></script>
   </body>
 </html>

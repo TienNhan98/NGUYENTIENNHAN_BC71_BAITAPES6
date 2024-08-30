@@ -4,6 +4,7 @@ export class ListChosen {
   }
 
   addItem(item) {
+    this.removeItem(item.type);
     this.items.push(item);
   }
 
