@@ -183,7 +183,7 @@ hr {
   background-color: #eff1f1;
   height: 700px;
   width: 100%;
-  /* overflow: hidden; Ngăn không cho nội dung tràn ra ngoài */
+  /* overflow: hidden; */
 }
 
 .card {
@@ -220,4 +220,192 @@ hr {
 
 .model-container img {
   max-height: 100%;
+}
+
+/* TEST */
+#tab-content-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* Khoảng cách giữa các thẻ card */
+  justify-content: space-between; /* Đảm bảo các card được phân bố đều */
+  width: 100%;
+  max-width: 1200px; /* Điều chỉnh chiều rộng tối đa nếu cần */
+  margin: 0 auto; /* Căn giữa container */
+  box-sizing: border-box;
+}
+
+.card {
+  flex: 1 1 calc(25% - 10px); /* Điều chỉnh kích thước để có 4 card trong một hàng */
+  box-sizing: border-box;
+  background-color: #eff1f1;
+  margin-bottom: 20px; /* Khoảng cách dưới mỗi thẻ card */
+  padding: 10px; /* Padding cần thiết */
+  overflow: hidden; /* Ngăn không cho nội dung card tràn ra ngoài */
+  border: none; /* Xóa viền thẻ card nếu cần */
+}
+
+.card-img-top {
+  width: 100%; /* Đảm bảo hình ảnh chiếm toàn bộ chiều rộng của thẻ card */
+  height: auto; /* Giữ tỷ lệ khung hình */
+}
+
+/* Định dạng tiêu đề trong .well */
+.well h4 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+/* Định dạng thẻ card trong .well */
+.well .card {
+  background-color: #eff1f1;
+}
+
+/* Định dạng các thẻ card trong tab */
+.card {
+  padding: 30px;
+  background-color: rgba(214, 224, 226, 0.2);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  box-sizing: border-box;
+}
+
+/* Định dạng thẻ card khi hover */
+.card.hovercard {
+  position: relative;
+  padding-top: 0;
+  overflow: hidden;
+  text-align: center;
+  background-color: #fff;
+}
+
+/* Định dạng cho các tab */
+.nav-pills .nav-link {
+  border: 1px solid #ccc;
+  border-radius: 0 !important;
+  padding: 10px;
+  color: #000; /* Màu chữ mặc định */
+  transition: background-color 0.3s ease; /* Hiệu ứng chuyển đổi màu nền */
+}
+
+/* Định dạng cho tab khi hover */
+.nav-pills .nav-link:hover {
+  background-color: #0056b3; /* Màu nền khi hover */
+  color: #fff; /* Màu chữ khi hover */
+}
+
+/* Định dạng cho tab khi active */
+.nav-pills .nav-link.active {
+  background-color: #007bff; /* Màu nền khi active */
+  color: #fff; /* Màu chữ khi active */
+}
+
+/* Định dạng thẻ card trong nội dung tab */
+#tab-content-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* Khoảng cách giữa các thẻ card */
+  justify-content: space-between; /* Đảm bảo các card được phân bố đều */
+  width: 100%;
+  max-width: 1200px; /* Điều chỉnh chiều rộng tối đa nếu cần */
+  margin: 0 auto; /* Căn giữa container */
+  box-sizing: border-box;
+}
+
+.card {
+  flex: 1 1 calc(25% - 10px); /* Điều chỉnh kích thước để có 4 card trong một hàng */
+  box-sizing: border-box;
+  background-color: #eff1f1;
+  margin-bottom: 20px; /* Khoảng cách dưới mỗi thẻ card */
+  padding: 10px; /* Padding cần thiết */
+  overflow: hidden; /* Ngăn không cho nội dung card tràn ra ngoài */
+  border: none; /* Xóa viền thẻ card nếu cần */
+}
+
+.card-img-top {
+  width: 100%; /* Đảm bảo hình ảnh chiếm toàn bộ chiều rộng của thẻ card */
+  height: auto; /* Giữ tỷ lệ khung hình */
+}
+
+/* Định dạng cho model */
+.contain {
+  width: 460px;
+  height: 590px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.model-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+}
+
+.model-container img {
+  max-height: 100%;
+}
+
+/* Các thành phần khác */
+.background {
+  width: 900px;
+  height: 1500px;
+  background-image: url(./../images/background/background1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: -90%;
+  right: -50%;
+  transform: scale(0.5);
+  z-index: -1;
+}
+
+/* Style for card */
+.card {
+  flex: 1 1 15%; /* Điều chỉnh kích thước để có thể fit trong một hàng */
+  box-sizing: border-box; /* Đảm bảo padding và border không làm tăng kích thước của thẻ card */
+  background-color: #eff1f1;
+  margin-bottom: 20px; /* Khoảng cách dưới mỗi thẻ card */
+  padding: 10px; /* Padding cần thiết */
+  overflow: hidden; /* Ngăn không cho nội dung card tràn ra ngoài */
+  border: none; /* Xóa viền thẻ card nếu cần */
+}
+
+/* Style for image inside card */
+.card-img-top {
+  width: 100%; /* Đảm bảo hình ảnh chiếm toàn bộ chiều rộng của thẻ card */
+  height: auto; /* Giữ tỷ lệ khung hình */
+  max-width: 100%; /* Đảm bảo hình ảnh không vượt quá kích thước của thẻ card */
+  object-fit: cover; /* Đảm bảo hình ảnh không bị méo */
+}
+
+/* Container for tab content */
+#tab-content-container {
+  display: flex;
+  flex-wrap: wrap; /* Đảm bảo các thẻ card sẽ tự động xuống dòng nếu không đủ không gian */
+  gap: 10px; /* Khoảng cách giữa các thẻ card */
+  justify-content: space-between; /* Đảm bảo các card được phân bố đều */
+  width: 100%;
+  max-width: 1200px; /* Điều chỉnh chiều rộng tối đa nếu cần */
+  margin: 0 auto; /* Căn giữa container */
+  box-sizing: border-box;
+}
+
+/* Style for well section */
+.well {
+  background-color: #eff1f1;
+  height: auto; /* Đảm bảo chiều cao tự động thay đổi theo nội dung */
+  width: 100%;
+  overflow: hidden; /* Ẩn phần nội dung bị tràn */
+}
+
+/* Style for contain section */
+.contain {
+  width: 460px;
+  height: 590px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden; /* Ẩn phần nội dung bị tràn */
 }
